@@ -1,6 +1,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+ <queries>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="https" />
+  </intent>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="market" />
+  </intent>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="tel" />
+  </intent>
+</queries>
+
     <application
-        android:label="fast_launcher"
+        android:label="Fast Launcher"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
