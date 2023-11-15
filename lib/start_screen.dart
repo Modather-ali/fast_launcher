@@ -9,6 +9,10 @@ class StartScreen extends StatelessWidget {
     super.key,
   });
 
+  final String _googlePlayUrl =
+      'https://play.google.com/store/apps/details?id=';
+  final String _whatsappUrl = 'https://wa.me/';
+  //'whatsapp://send?phone=';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,13 +24,17 @@ class StartScreen extends StatelessWidget {
           UrlButton(
             icon: Icons.call,
             onPressed: () {
-              _goToLauncher(context, '');
+              _goToLauncher(context, _whatsappUrl);
             },
+          ),
+          const SizedBox(
+            width: double.infinity,
+            height: 20,
           ),
           UrlButton(
             icon: Icons.store,
             onPressed: () {
-              _goToLauncher(context, '');
+              _goToLauncher(context, _googlePlayUrl);
             },
           ),
         ],

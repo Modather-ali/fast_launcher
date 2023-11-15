@@ -13,7 +13,7 @@
   </intent>
   <intent>
     <action android:name="android.intent.action.VIEW" />
-    <data android:scheme="tel" />
+    <data android:scheme="whatsapp" />
   </intent>
 </queries>
 
