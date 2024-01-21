@@ -15,9 +15,12 @@ class UrlButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(50),
       ),
-      child: IconButton(
-        onPressed: onPressed,
-        icon: Icon(icon),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: IconButton(
+          onPressed: onPressed,
+          icon: Icon(icon),
+        ),
       ),
     );
   }

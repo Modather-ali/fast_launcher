@@ -9,17 +9,20 @@ class LauncherScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         children: [
           const SizedBox(
             width: double.infinity,
-            height: 400,
+            height: 200,
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 15),
             child: TextField(
               controller: _controller,
+              decoration: const InputDecoration(border: OutlineInputBorder()),
+              maxLines: null,
             ),
           ),
           OutlinedButton(

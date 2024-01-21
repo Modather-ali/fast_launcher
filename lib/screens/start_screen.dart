@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../services/urls.dart';
 import 'launcher_screen.dart';
@@ -13,26 +14,46 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Fast Launcher')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(width: double.infinity),
-          UrlButton(
-            icon: Icons.call,
-            onPressed: () {
-              _goToLauncher(context, Urls.whatsappUrl);
-            },
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              UrlButton(
+                icon: FontAwesomeIcons.whatsapp,
+                onPressed: () {
+                  _goToLauncher(context, Urls.whatsapp);
+                },
+              ),
+              UrlButton(
+                icon: FontAwesomeIcons.googlePay,
+                onPressed: () {
+                  _goToLauncher(context, Urls.googlePlay);
+                },
+              ),
+            ],
           ),
-          const SizedBox(
-            width: double.infinity,
-            height: 20,
-          ),
-          UrlButton(
-            icon: Icons.store,
-            onPressed: () {
-              _goToLauncher(context, Urls.googlePlayUrl);
-            },
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              UrlButton(
+                icon: FontAwesomeIcons.telegram,
+                onPressed: () {
+                  _goToLauncher(context, Urls.telegram);
+                },
+              ),
+              UrlButton(
+                icon: FontAwesomeIcons.link,
+                onPressed: () {
+                  _goToLauncher(context, '');
+                },
+              ),
+            ],
           ),
         ],
       ),

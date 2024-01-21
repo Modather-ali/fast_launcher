@@ -1,5 +1,6 @@
 class Urls {
-  static const String googlePlayUrl =
+  static const String googlePlay =
       'https://play.google.com/store/apps/details?id=';
-  static const String whatsappUrl = 'https://wa.me/';
+  static const String whatsapp = 'https://wa.me/';
+  static const String telegram = 'https://t.me/';
 }
