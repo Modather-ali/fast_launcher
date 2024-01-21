@@ -1,18 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../services/urls.dart';
 import 'launcher_screen.dart';
-import 'url_button.dart';
+import 'widgets/url_button.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({
     super.key,
   });
 
-  final String _googlePlayUrl =
-      'https://play.google.com/store/apps/details?id=';
-  final String _whatsappUrl = 'https://wa.me/';
-  //'whatsapp://send?phone=';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +21,7 @@ class StartScreen extends StatelessWidget {
           UrlButton(
             icon: Icons.call,
             onPressed: () {
-              _goToLauncher(context, _whatsappUrl);
+              _goToLauncher(context, Urls.whatsappUrl);
             },
           ),
           const SizedBox(
@@ -34,7 +31,7 @@ class StartScreen extends StatelessWidget {
           UrlButton(
             icon: Icons.store,
             onPressed: () {
-              _goToLauncher(context, _googlePlayUrl);
+              _goToLauncher(context, Urls.googlePlayUrl);
             },
           ),
         ],

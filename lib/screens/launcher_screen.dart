@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'launcher_services.dart';
+import '../services/launcher_services.dart';
 
 class LauncherScreen extends StatelessWidget {
   final String url;
